@@ -48,15 +48,25 @@ def execute():
             #print("https:"+u.split('url("')[1])
     for index, s in enumerate(txt):
         txts[index] = s['title']
-    print(len(txts))    
+    print(len(txts))
+
     for ind, r in enumerate(txts):
-        urllib.request.urlretrieve(urls[ind], os.getcwd() + '/space.jpg')
-        cap = txts[ind] + "\n\n\nCredits: " + url + "\n\n\n #space#nasa#spacex#elon#elonmusk#astronout#engineer#adventure#epic"
-        bot.upload_photo(os.getcwd() + '/space.jpg',caption = cap) 
-        os.remove(os.getcwd() + '/space.jpg')
-        print(txts[ind])
-        print(urls[ind])
-        time.sleep(2400)
+        with open("Memory.txt", "r+") as myfile:
+
+            # A file is an iterable of lines, so this will
+            # check if any of the lines in myfile equals line+"\n"
+            if urls[ind]+"\n" not in myfile:
+
+                # Write it; assumes file ends in "\n" already
+                myfile.write(urls[ind]+"\n")
+                myfile.flush()
+                urllib.request.urlretrieve(urls[ind], os.getcwd() + '/space.jpg')
+                cap = txts[ind] + "\n\n\nCredits: " + url + "\n\n\n #space#nasa#spacex#elon#elonmusk#astronout#engineer#adventure#epic"
+                #bot.upload_photo(os.getcwd() + '/space.jpg',caption = cap) 
+                os.remove(os.getcwd() + '/space.jpg')
+                print(txts[ind])
+                print(urls[ind])
+                time.sleep(2400)
     else:
         tracker = tracker + 1
         nexts = True
