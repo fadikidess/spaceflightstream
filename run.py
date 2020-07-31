@@ -56,7 +56,7 @@ def execute():
         os.remove(os.getcwd() + '/space.jpg')
         print(txts[ind])
         print(urls[ind])
-        time.sleep(14400)
+        time.sleep(2400)
     else:
         tracker = tracker + 1
         nexts = True
