@@ -62,7 +62,6 @@ PyGetWindow==0.0.8
 Pygments==2.6.1
 PyMsgBox==1.0.8
 pyobjc==6.2.2
-pyobjc-core==6.2.2
 pyobjc-framework-Accounts==6.2.2
 pyobjc-framework-AddressBook==6.2.2
 pyobjc-framework-AppleScriptKit==6.2.2
@@ -74,7 +73,6 @@ pyobjc-framework-AVKit==6.2.2
 pyobjc-framework-CalendarStore==6.2.2
 pyobjc-framework-CFNetwork==6.2.2
 pyobjc-framework-CloudKit==6.2.2
-pyobjc-framework-Cocoa==6.2.2
 pyobjc-framework-Collaboration==6.2.2
 pyobjc-framework-ColorSync==6.2.2
 pyobjc-framework-Contacts==6.2.2
@@ -137,7 +135,6 @@ pyobjc-framework-PhotosUI==6.2.2
 pyobjc-framework-PreferencePanes==6.2.2
 pyobjc-framework-PubSub==6.2.2
 pyobjc-framework-QTKit==6.2.2
-pyobjc-framework-Quartz==6.2.2
 pyobjc-framework-SafariServices==6.2.2
 pyobjc-framework-SceneKit==6.2.2
 pyobjc-framework-ScreenSaver==6.2.2
