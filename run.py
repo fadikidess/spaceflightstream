@@ -61,7 +61,7 @@ def execute():
                 myfile.write(urls[ind]+"\n")
                 myfile.flush()
                 urllib.request.urlretrieve(urls[ind], os.getcwd() + '/space.jpg')
-                cap = txts[ind] + "\n\n\nCredits: " + url + "\n\n\n #space#nasa#spacex#elon#elonmusk#astronout#engineer#adventure#epic"
+                cap = txts[ind] + "\n\n\nCredits: " + uro + "\n\n\n #space#nasa#spacex#elon#elonmusk#astronout#engineer#adventure#epic#cool#launch"
                 bot.upload_photo(os.getcwd() + '/space.jpg',caption = cap)
                 print(txts[ind])
                 print(urls[ind])
