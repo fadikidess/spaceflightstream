@@ -54,7 +54,7 @@ def execute():
                 bot.upload_photo(os.getcwd() + '/space.jpg',caption = cap)
                 print(txts[ind])
                 print(urls[ind])
-                time.sleep(7200)
+                time.sleep(2500)
     else:
         tracker = tracker + 1
         nexts = True
