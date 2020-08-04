@@ -49,10 +49,9 @@ def execute():
             # A file is an iterable of lines, so this will
             # check if any of the lines in myfile equals line+"\n"
             if urls[ind]+"\n" not in myfile:
-                urllib.request.urlretrieve(urls[ind], '/Users/fadikidess/Downloads/ISS-photo-locations-master/scripts/space.jpg')
-                cap = txts[ind] + "\n\n\nCredits: " + url + "\n\n\n #space#nasa#spacex#elon#elonmusk#astronout#engineer#adventure#epic"
-                bot.upload_photo('/Users/fadikidess/Downloads/ISS-photo-locations-master/scripts/space.jpg',caption = cap) 
-                os.remove('/Users/fadikidess/Downloads/ISS-photo-locations-master/scripts/space.jpg')
+                urllib.request.urlretrieve(urls[ind], os.getcwd() + '/space.jpg')
+                cap = txts[ind] + "\n\n\nCredits: " + urls[ind] + "\n\n\n #space#nasa#spacex#elon#elonmusk#astronout#engineer#adventure#epic"
+                bot.upload_photo(os.getcwd() + '/space.jpg',caption = cap)
                 print(txts[ind])
                 print(urls[ind])
                 time.sleep(7200)
