@@ -10,7 +10,7 @@ import os
 url = "https://www.spacetelescope.org/images/page/"
 urls = {}
 txts = {}
-tracker = 1
+tracker = 4
 nexts = False
 bot = Bot() 
 bot.login(username = "spaceflightstream",password = "FGKpro2003") 
