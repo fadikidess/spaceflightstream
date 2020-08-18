@@ -73,21 +73,13 @@ def execute():
             bot.upload_photo(os.getcwd() + '/space.jpg',caption = cap)
             print(txts[ind])
             print(urls[ind])
-            time.sleep(2400)
             po = """ INSERT INTO urls (url) VALUES (%s)"""
             record_to_insert = (urls[ind])
             cur.execute(po, record_to_insert)
 
             conn.commit()
-        with open("Memory.txt", "r+") as myfile:
-
-            # A file is an iterable of lines, so this will
-            # check if any of the lines in myfile equals line+"\n"
-            if urls[ind]+"\n" not in myfile:
-
-                # Write it; assumes file ends in "\n" already
-                myfile.write(urls[ind]+"\n")
-                myfile.flush()
+            time.sleep(2400)
+            
                 
     else:
         tracker = tracker + 1
