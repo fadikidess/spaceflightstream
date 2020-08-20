@@ -70,7 +70,7 @@ def execute():
         if tempdr == False:
             urllib.request.urlretrieve(urls[ind], os.getcwd() + '/space.jpg')
             cap = txts[ind] + "\n\n\nCredits: " + uro + "\n\n\n #space#nasa#spacex#elon#elonmusk#astronout#engineer#adventure#epic#cool#launch"
-            po = "INSERT INTO urls (url) VALUES ("+urls[ind]+")"
+            po = "INSERT INTO urls (url) VALUES ('"+urls[ind]+"')"
             record_to_insert = (urls[ind])
             cur.execute(po, record_to_insert)
             bot.upload_photo(os.getcwd() + '/space.jpg',caption = cap)
