@@ -11,7 +11,7 @@ import psycopg2
 url = "https://www.flickr.com/photos/nasa2explore/page"
 urls = {}
 txts = {}
-tracker = 1
+tracker = 3
 nexts = False
 bot = Bot() 
 bot.login(username = "spaceflightstream",password = "FGKpro2003") 
