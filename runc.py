@@ -7,6 +7,7 @@ from selenium import webdriver
 import time
 from instabot import Bot
 import os
+import psycopg2
 url = "https://www.spacetelescope.org/images/page/"
 urls = {}
 txts = {}
