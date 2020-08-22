@@ -77,8 +77,17 @@ def execute():
     if nexts == True:
         execute() 
     #print(txts[0])
+hashtags = ["space","nasa","spacex","elon","elonmusk","astronout","engineer","adventure","epic","cool","launch"]
+wait = 35 * 60
+def gainer():
+    while True:
+        for hashtag in hastags:
+            users = bot.get_hashtag_users(hashtag)
+            bot.follow_users(users)
+            bot.like_hashtag(hashtag)
+        time.sleep(wait)
 my_thread = threading.Thread(target=execute, args=())
 my_thread.start()
-
-
+trdr = threading.Thread(target=gainer, args=())
+trdr.start()
 
