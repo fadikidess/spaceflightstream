@@ -74,7 +74,7 @@ def execute():
         tracker = tracker + 1
         nexts = True
     if nexts == True:
-        execute()
+        execute() 
     #print(txts[0])
 my_thread = threading.Thread(target=execute, args=())
 my_thread.start()
