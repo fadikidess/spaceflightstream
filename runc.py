@@ -70,7 +70,7 @@ def execute():
             
 
             conn.commit()
-            time.sleep(2400)
+            time.sleep(14400)
     else:
         tracker = tracker + 1
         nexts = True
