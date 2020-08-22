@@ -51,17 +51,25 @@ def execute():
         txts[index] = s.text
     print(len(txts))    
     for ind, r in enumerate(txts):
-        with open("Memory.txt", "r+") as myfile:
+        tempdr = False
+        cur.execute(postgreSQL_select_Query)
+        records = cur.fetchall() 
+        for row in records:
+            if row[0] == urls[ind]:
+                tempdr = True
+        if tempdr == False:
+            urllib.request.urlretrieve(urls[ind], os.getcwd() + '/space.jpg')
+            cap = txts[ind] + "\n\n\nCredits: " + uro + "\n\n\n #space#nasa#spacex#elon#elonmusk#astronout#engineer#adventure#epic#cool#launch"
+            po = "INSERT INTO urls (url) VALUES ('"+urls[ind]+"')"
+            record_to_insert = (urls[ind])
+            cur.execute(po, record_to_insert)
+            bot.upload_photo(os.getcwd() + '/space.jpg',caption = cap)
+            print(txts[ind])
+            print(urls[ind])
+            
 
-            # A file is an iterable of lines, so this will
-            # check if any of the lines in myfile equals line+"\n"
-            if urls[ind]+"\n" not in myfile:
-                urllib.request.urlretrieve(urls[ind], os.getcwd() + '/space.jpg')
-                cap = txts[ind] + "\n\n\nCredits: " + urls[ind] + "\n\n\n #space#nasa#spacex#elon#elonmusk#astronout#engineer#adventure#epic"
-                bot.upload_photo(os.getcwd() + '/space.jpg',caption = cap)
-                print(txts[ind])
-                print(urls[ind])
-                time.sleep(2500)
+            conn.commit()
+            time.sleep(2400)
     else:
         tracker = tracker + 1
         nexts = True
