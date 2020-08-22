@@ -14,6 +14,13 @@ tracker = 4
 nexts = False
 bot = Bot() 
 bot.login(username = "spaceflightstream",password = "FGKpro2003") 
+DATABASE_URL = os.environ['DATABASE_URL']
+
+conn = psycopg2.connect(DATABASE_URL, sslmode='require')
+conn = psycopg2.connect(database = "d9i3n82aq3qb6v", user = "cdlxvjkiuieoeu", password = "d0487bbce60768a4e6e96831b8b3e6cb7d98b93d2ddc4ebd16410d098fad8761", host = "ec2-52-22-216-69.compute-1.amazonaws.com", port = "5432")
+print("Opened database successfully")
+postgreSQL_select_Query = "select * from urls"
+cur = conn.cursor()
 def execute():
     global url
     global tracker
