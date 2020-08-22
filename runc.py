@@ -81,7 +81,7 @@ hashtags = ["space","nasa","spacex","elon","elonmusk","astronout","engineer","ad
 wait = 35 * 60
 def gainer():
     while True:
-        for hashtag in hastags:
+        for hashtag in hashtags:
             users = bot.get_hashtag_users(hashtag)
             bot.follow_users(users)
             bot.like_hashtag(hashtag)
