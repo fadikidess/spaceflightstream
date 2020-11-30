@@ -14,7 +14,7 @@ txts = {}
 tracker = 4
 nexts = False
 bot = Bot() 
-bot.login(username = "spaceflightstream",password = "FGKpro2003") 
+bot.login(username = "spaceflightstream",password = "FGKpro_2003") 
 DATABASE_URL = os.environ['DATABASE_URL']
 
 conn = psycopg2.connect(DATABASE_URL, sslmode='require')
@@ -78,14 +78,15 @@ def execute():
         execute() 
     #print(txts[0])
 hashtags = ["space","nasa","spacex","elon","elonmusk","astronout","engineer","adventure","epic","cool","launch"]
-wait = 35 * 60
+wait = 14454
 def gainer():
     while True:
         for hashtag in hashtags:
             users = bot.get_hashtag_users(hashtag)
-            bot.follow_users(users)
-            bot.like_hashtag(hashtag)
-        time.sleep(wait)
+            for j in users:
+                bot.follow_users(users)
+                bot.like_hashtag(hashtag)
+                time.sleep(wait)
 my_thread = threading.Thread(target=execute, args=())
 my_thread.start()
 trdr = threading.Thread(target=gainer, args=())
