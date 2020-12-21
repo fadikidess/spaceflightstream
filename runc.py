@@ -14,7 +14,7 @@ txts = {}
 tracker = 4
 nexts = False
 bot = Bot() 
-bot.login(username = "spaceflightstream",password = "") 
+bot.login(username = "spaceflightstream",password = "mypassword") 
 DATABASE_URL = os.environ['DATABASE_URL']
 
 conn = psycopg2.connect(DATABASE_URL, sslmode='require')
