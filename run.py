@@ -14,7 +14,7 @@ txts = {}
 tracker = 3
 nexts = False
 bot = Bot() 
-bot.login(username = "spaceflightstream",password = "FGKpro2003") 
+bot.login(username = "spaceflightstream",password = "********") 
 
 
 DATABASE_URL = os.environ['DATABASE_URL']
