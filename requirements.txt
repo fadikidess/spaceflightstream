@@ -60,7 +60,7 @@ ptyprocess==0.6.0
 py==1.9.0
 PyAutoGUI==0.9.50
 PyGetWindow==0.0.8
-Pygments==2.6.1
+Pygments==2.7.4
 PyMsgBox==1.0.8
 pyparsing==2.4.7
 pyperclip==1.8.0
