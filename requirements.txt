@@ -57,7 +57,7 @@ proglog==0.1.9
 prometheus-client==0.8.0
 prompt-toolkit==3.0.5
 ptyprocess==0.6.0
-py==1.9.0
+py==1.10.0
 PyAutoGUI==0.9.50
 PyGetWindow==0.0.8
 Pygments==2.6.1
